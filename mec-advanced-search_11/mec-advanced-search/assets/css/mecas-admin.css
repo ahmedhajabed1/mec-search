@@ -1,0 +1,306 @@
+/**
+ * MEC Advanced Search Admin Styles
+ */
+
+.mecas-admin-wrap {
+    max-width: 1200px;
+}
+
+/* Tabs Navigation */
+.mecas-admin-tabs .nav-tab-wrapper {
+    margin-bottom: 0;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+.mecas-admin-tabs .nav-tab {
+    border-bottom: none;
+    margin-bottom: -1px;
+}
+
+.mecas-admin-tabs .nav-tab-active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* Tab Content */
+.mecas-tab-content {
+    display: none;
+    background: #fff;
+    padding: 20px 25px;
+    border: 1px solid #c3c4c7;
+    border-top: none;
+}
+
+.mecas-tab-content.active {
+    display: block;
+}
+
+.mecas-tab-content h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.mecas-tab-content h3 {
+    margin-top: 30px;
+}
+
+/* Index Status Box */
+.mecas-index-status-box {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.mecas-index-status-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#mecas-index-status {
+    margin-bottom: 15px;
+}
+
+#mecas-index-status .status-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#mecas-index-status .status-item:last-child {
+    border-bottom: none;
+}
+
+#mecas-index-status .status-label {
+    font-weight: 500;
+}
+
+#mecas-index-status .status-value {
+    color: #50575e;
+}
+
+#mecas-index-status .status-value.success {
+    color: #00a32a;
+}
+
+#mecas-index-status .status-value.warning {
+    color: #dba617;
+}
+
+/* Index Actions */
+.mecas-index-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.mecas-index-spinner.spinner {
+    float: none;
+    margin: 0;
+}
+
+/* Progress Bar */
+#mecas-index-progress {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.mecas-progress-bar {
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.mecas-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #40E0D0, #2563eb);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.mecas-progress-text {
+    text-align: center;
+    font-weight: 500;
+    color: #50575e;
+}
+
+/* Shortcode Boxes */
+.mecas-shortcode-box {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.mecas-shortcode-box code {
+    flex: 1;
+    white-space: pre-wrap;
+    word-break: break-all;
+    background: transparent;
+    padding: 0;
+    font-size: 13px;
+}
+
+.mecas-copy-btn {
+    flex-shrink: 0;
+}
+
+/* CSS Reference */
+.mecas-css-reference {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.mecas-css-reference h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.mecas-css-reference h4:not(:first-child) {
+    margin-top: 20px;
+}
+
+.mecas-css-reference pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 0;
+}
+
+.mecas-css-reference code {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Color Pickers */
+.mecas-color-picker {
+    width: 100px;
+}
+
+/* Custom CSS Textarea */
+#mecas_custom_css {
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Preview Example */
+.mecas-preview-example {
+    background: #1A202C;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.mecas-preview-example .mecas-preview-item {
+    display: flex;
+    gap: 14px;
+    color: #fff;
+}
+
+.mecas-preview-example .mecas-preview-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #4A5568;
+    flex-shrink: 0;
+}
+
+.mecas-preview-example .mecas-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mecas-preview-example .mecas-preview-content {
+    flex: 1;
+}
+
+.mecas-preview-example .mecas-preview-organizer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #A0AEC0;
+    margin-bottom: 6px;
+}
+
+.mecas-preview-example .mecas-organizer-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #4A5568;
+}
+
+.mecas-preview-example .mecas-preview-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 6px;
+}
+
+.mecas-preview-example .mecas-preview-excerpt {
+    font-size: 13px;
+    color: #A0AEC0;
+    margin: 0 0 8px;
+}
+
+.mecas-preview-example .mecas-preview-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #A0AEC0;
+}
+
+/* Parameters Table */
+.mecas-tab-content .widefat {
+    margin-top: 15px;
+}
+
+.mecas-tab-content .widefat th,
+.mecas-tab-content .widefat td {
+    padding: 12px 15px;
+}
+
+.mecas-tab-content .widefat code {
+    background: #f0f0f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .mecas-shortcode-box {
+        flex-direction: column;
+    }
+    
+    .mecas-shortcode-box code {
+        width: 100%;
+    }
+    
+    .mecas-preview-example .mecas-preview-item {
+        flex-direction: column;
+    }
+    
+    .mecas-preview-example .mecas-preview-image {
+        width: 100%;
+        height: 120px;
+    }
+}
