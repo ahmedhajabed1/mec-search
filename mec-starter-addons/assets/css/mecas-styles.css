@@ -1,0 +1,4415 @@
+/**
+ * MEC Starter Addons - Styles
+ * Version 4.0.0 - Redesigned Event Cards
+ */
+
+:root {
+    --mecas-primary: #D97706;
+    --mecas-primary-hover: #B45309;
+    --mecas-dark-bg: #2D3748;
+    --mecas-border-color: #E5E7EB;
+    --mecas-text-light: #FFFFFF;
+    --mecas-text-dark: #1F2937;
+    --mecas-text-muted: #6B7280;
+    --mecas-text-placeholder: #9CA3AF;
+    --mecas-bg-white: #FFFFFF;
+    --mecas-bg-light: #F9FAFB;
+    --mecas-bg-cream: #FEF9F3;
+    --mecas-green-light: #D1FAE5;
+    --mecas-green-dark: #065F46;
+    --mecas-purple: #9333EA;
+    --mecas-pink: #F9A8D4;
+    --mecas-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --mecas-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+    --mecas-radius: 8px;
+    --mecas-radius-lg: 12px;
+    --mecas-radius-full: 50px;
+    --mecas-transition: 0.2s ease;
+}
+
+/* ========================================
+   SEARCH BAR - LIGHT VERSION FOR RESULTS
+======================================== */
+
+.mecas-search-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+
+.mecas-search-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mecas-search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--mecas-dark-bg);
+    border: 1px solid var(--mecas-border-color);
+    border-radius: var(--mecas-radius-full);
+    padding: 5px 5px 5px 20px;
+    min-height: 54px;
+}
+
+.mecas-search-container.mecas-search-light {
+    background-color: var(--mecas-bg-white);
+    border-color: var(--mecas-border-color);
+}
+
+.mecas-search-container.mecas-search-light .mecas-input {
+    color: var(--mecas-text-dark);
+}
+
+.mecas-search-container.mecas-search-light .mecas-input::placeholder {
+    color: var(--mecas-text-placeholder);
+}
+
+.mecas-search-container.mecas-search-light .mecas-input-icon {
+    color: var(--mecas-text-placeholder);
+}
+
+.mecas-search-container.mecas-search-light .mecas-divider {
+    background-color: var(--mecas-border-color);
+}
+
+/* Input Groups */
+.mecas-input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 0;
+    background: transparent;
+    gap: 8px;
+}
+
+.mecas-input-icon {
+    flex-shrink: 0;
+    color: var(--mecas-text-muted);
+}
+
+/* Text Inputs */
+.mecas-input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    background: transparent !important;
+    padding: 14px 8px !important;
+    font-size: 15px;
+    color: var(--mecas-text-light);
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: 1.4 !important;
+    height: auto !important;
+    margin: 0;
+}
+
+.mecas-input::placeholder {
+    color: var(--mecas-text-muted);
+    line-height: normal;
+}
+
+.mecas-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.mecas-input::placeholder {
+    color: var(--mecas-text-muted);
+}
+
+/* Divider */
+.mecas-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--mecas-border-color);
+    flex-shrink: 0;
+    margin: 0 8px;
+}
+
+/* Search Button */
+.mecas-search-button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background-color: var(--mecas-primary);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color var(--mecas-transition), transform var(--mecas-transition);
+}
+
+.mecas-search-button:hover {
+    background-color: var(--mecas-primary-hover);
+    transform: scale(1.05);
+}
+
+.mecas-search-button:focus {
+    outline: none;
+}
+
+.mecas-search-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--mecas-text-light);
+}
+
+/* ========================================
+   CATEGORY TABS
+======================================== */
+
+.mecas-category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mecas-category-tab {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: var(--mecas-bg-white);
+    color: var(--mecas-text-dark);
+    border: 1px solid var(--mecas-border-color);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--mecas-transition);
+}
+
+.mecas-category-tab:hover {
+    border-color: var(--mecas-green-light);
+    background-color: var(--mecas-bg-light);
+}
+
+.mecas-category-tab.active {
+    background-color: var(--mecas-green-light);
+    color: var(--mecas-green-dark);
+    border-color: #6EE7B7;
+}
+
+/* ========================================
+   FILTERS ROW
+======================================== */
+
+.mecas-filters-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.mecas-filter-select {
+    padding: 10px 36px 10px 14px;
+    font-size: 14px;
+    color: var(--mecas-text-dark);
+    background-color: var(--mecas-bg-white);
+    border: 1px solid var(--mecas-border-color);
+    border-radius: var(--mecas-radius);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    min-width: 150px;
+    width: auto !important;
+    max-width: 250px;
+    flex: 0 0 auto !important;
+    display: inline-block;
+    transition: border-color var(--mecas-transition);
+}
+
+.mecas-filter-select:hover {
+    border-color: var(--mecas-text-muted);
+}
+
+.mecas-filter-select:focus {
+    outline: none;
+    border-color: var(--mecas-primary);
+}
+
+/* ========================================
+   RESULTS GRID
+======================================== */
+
+.mecas-results-container {
+    padding: 0;
+}
+
+.mecas-results-grid,
+.mecas-featured-grid,
+.mecas-upcoming-grid {
+    display: grid;
+    gap: 24px;
+}
+
+/* ========================================
+   EVENT CARDS - NEW DESIGN
+======================================== */
+
+.mecas-event-card {
+    background: var(--mecas-bg-cream);
+    border-radius: var(--mecas-radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
+}
+
+.mecas-event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.mecas-event-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Card Image Wrapper */
+.mecas-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.mecas-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.mecas-event-card:hover .mecas-card-image {
+    transform: scale(1.02);
+}
+
+.mecas-card-image-placeholder {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--mecas-bg-light) 0%, #E5E7EB 100%);
+}
+
+.mecas-card-image-placeholder svg {
+    width: 48px;
+    height: 48px;
+    stroke: #D1D5DB;
+}
+
+/* Price Badge */
+.mecas-price-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--mecas-green-light);
+    color: var(--mecas-green-dark);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Date Bar */
+.mecas-date-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--mecas-text-light);
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    backdrop-filter: blur(4px);
+}
+
+.mecas-date-text {
+    font-weight: 500;
+}
+
+/* Tag Badge */
+.mecas-tag-badge {
+    background-color: var(--mecas-green-light);
+    color: var(--mecas-green-dark);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Card Content */
+.mecas-card-content {
+    padding: 16px;
+}
+
+.mecas-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--mecas-text-dark);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mecas-card-location {
+    font-size: 14px;
+    color: var(--mecas-text-muted);
+    margin: 0 0 4px 0;
+}
+
+.mecas-card-organizer {
+    font-size: 14px;
+    color: var(--mecas-purple);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ========================================
+   ORGANIZER CARDS
+======================================== */
+
+.mecas-organizers-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.mecas-organizer-card {
+    background: var(--mecas-bg-white);
+    border: 1px solid #E5E7EB;
+    border-radius: var(--mecas-radius-lg);
+    overflow: hidden;
+    transition: transform var(--mecas-transition), box-shadow var(--mecas-transition);
+}
+
+.mecas-organizer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mecas-organizer-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.mecas-organizer-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.mecas-organizer-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.mecas-organizer-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%);
+}
+
+.mecas-organizer-image-placeholder svg {
+    width: 64px;
+    height: 64px;
+    stroke: #C4B5FD;
+}
+
+/* Location Bar */
+.mecas-organizer-location-bar {
+    background-color: #E8927C;
+    color: var(--mecas-text-light);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Heart Icon - outline style, no background */
+.mecas-heart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform var(--mecas-transition);
+    flex-shrink: 0;
+}
+
+.mecas-heart-icon:hover {
+    transform: scale(1.1);
+}
+
+.mecas-heart-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--mecas-text-light);
+    fill: none;
+}
+
+.mecas-location-text {
+    flex: 1;
+}
+
+/* Organizer Content */
+.mecas-organizer-content {
+    padding: 16px;
+}
+
+.mecas-organizer-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--mecas-text-dark);
+    margin: 0 0 4px 0;
+}
+
+.mecas-organizer-tagline {
+    font-size: 14px;
+    color: var(--mecas-text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ========================================
+   SUGGESTIONS DROPDOWN
+======================================== */
+
+.mecas-suggestions {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -20px;
+    right: -20px;
+    background: var(--mecas-bg-white);
+    border: 1px solid var(--mecas-border-color);
+    border-radius: var(--mecas-radius);
+    box-shadow: var(--mecas-shadow-lg);
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.mecas-suggestions.active {
+    display: block;
+}
+
+.mecas-suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color var(--mecas-transition);
+    color: var(--mecas-text-dark);
+}
+
+.mecas-suggestion-item:hover,
+.mecas-suggestion-item.active {
+    background-color: var(--mecas-bg-light);
+}
+
+.mecas-suggestion-image {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--mecas-radius);
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: var(--mecas-bg-light);
+}
+
+.mecas-suggestion-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.mecas-suggestion-title {
+    font-weight: 500;
+    color: var(--mecas-text-dark);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mecas-suggestion-meta {
+    font-size: 13px;
+    color: var(--mecas-text-muted);
+}
+
+.mecas-suggestions-loading,
+.mecas-suggestions-empty {
+    padding: 16px;
+    text-align: center;
+    color: var(--mecas-text-muted);
+}
+
+/* ========================================
+   TRIGGER BUTTON (Popup Mode)
+======================================== */
+
+.mecas-trigger-wrapper {
+    display: inline-block;
+}
+
+.mecas-trigger-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--mecas-dark-bg);
+    color: var(--mecas-text-light);
+    border: 1px solid var(--mecas-border-color);
+    border-radius: var(--mecas-radius-full);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--mecas-transition);
+}
+
+.mecas-trigger-button:hover {
+    background-color: #374151;
+    border-color: var(--mecas-text-muted);
+}
+
+.mecas-trigger-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ========================================
+   MOBILE TRIGGER ICON
+======================================== */
+
+.mecas-mobile-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--mecas-dark-bg);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--mecas-transition);
+}
+
+.mecas-mobile-trigger:hover {
+    background-color: #374151;
+}
+
+.mecas-mobile-trigger:focus {
+    outline: none;
+}
+
+.mecas-mobile-trigger svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--mecas-text-muted);
+}
+
+/* ========================================
+   MODAL / POPUP
+======================================== */
+
+.mecas-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.mecas-modal-overlay.active {
+    display: flex;
+}
+
+.mecas-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: mecas-backdrop-in 0.3s ease;
+}
+
+@keyframes mecas-backdrop-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.mecas-modal-overlay[data-backdrop-blur="yes"] .mecas-modal-backdrop,
+.mecas-modal-overlay[data-backdrop-blur="true"] .mecas-modal-backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.mecas-modal-content {
+    position: relative;
+    background: var(--mecas-bg-white);
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: var(--mecas-shadow-lg);
+}
+
+/* Popup Animations */
+.mecas-modal-fade-scale {
+    animation: mecas-modal-fade-scale 0.3s ease;
+}
+
+@keyframes mecas-modal-fade-scale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.mecas-modal-slide-up {
+    animation: mecas-modal-slide-up 0.3s ease;
+}
+
+@keyframes mecas-modal-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mecas-modal-slide-down {
+    animation: mecas-modal-slide-down 0.3s ease;
+}
+
+@keyframes mecas-modal-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mecas-modal-fade {
+    animation: mecas-modal-fade 0.3s ease;
+}
+
+@keyframes mecas-modal-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.mecas-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--mecas-bg-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--mecas-text-muted);
+    transition: all var(--mecas-transition);
+}
+
+.mecas-modal-close:hover {
+    background-color: #E5E7EB;
+    color: var(--mecas-text-dark);
+}
+
+.mecas-modal-close svg {
+    width: 18px;
+    height: 18px;
+}
+
+.mecas-modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--mecas-text-dark);
+    margin: 0 0 24px 0;
+    padding-right: 40px;
+}
+
+/* ========================================
+   PAGINATION
+======================================== */
+
+.mecas-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--mecas-border-color);
+}
+
+.mecas-pagination a,
+.mecas-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: var(--mecas-text-dark);
+    background: var(--mecas-bg-white);
+    border: 1px solid var(--mecas-border-color);
+    border-radius: var(--mecas-radius);
+    text-decoration: none;
+    transition: all var(--mecas-transition);
+}
+
+.mecas-pagination a:hover {
+    background-color: var(--mecas-bg-light);
+    border-color: var(--mecas-text-muted);
+}
+
+.mecas-pagination .current {
+    background-color: var(--mecas-text-dark);
+    border-color: var(--mecas-text-dark);
+    color: var(--mecas-text-light);
+}
+
+.mecas-pagination .dots {
+    border: none;
+    background: transparent;
+}
+
+/* ========================================
+   NO RESULTS
+======================================== */
+
+.mecas-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--mecas-text-muted);
+}
+
+.mecas-no-results-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    color: #D1D5DB;
+}
+
+.mecas-no-results-text {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ========================================
+   LOADING STATE
+======================================== */
+
+.mecas-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.mecas-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--mecas-border-color);
+    border-top-color: var(--mecas-primary);
+    border-radius: 50%;
+    animation: mecas-spin 0.8s linear infinite;
+}
+
+/* Geolocation Loading */
+.mecas-location-loading {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.mecas-spinner {
+    animation: mecas-spin 1s linear infinite;
+}
+
+.mecas-spinner circle {
+    stroke: var(--mecas-text-muted);
+}
+
+.mecas-spinner path {
+    stroke: var(--mecas-text-dark);
+}
+
+@keyframes mecas-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .mecas-search-container {
+        flex-wrap: wrap;
+        border-radius: 16px;
+        padding: 12px;
+    }
+    
+    .mecas-input-group {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        padding: 8px 0;
+    }
+    
+    .mecas-search-input-group {
+        border-bottom: 1px solid var(--mecas-border-color);
+        padding-bottom: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .mecas-divider {
+        display: none !important;
+    }
+    
+    .mecas-search-button {
+        width: 100% !important;
+        border-radius: var(--mecas-radius) !important;
+        margin-left: 0 !important;
+        margin-top: 8px;
+        height: 44px !important;
+    }
+    
+    .mecas-category-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+    }
+    
+    .mecas-category-tab {
+        flex-shrink: 0;
+    }
+    
+    .mecas-filters-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .mecas-filter-select {
+        width: 100%;
+    }
+    
+    .mecas-modal-content {
+        padding: 24px 16px;
+        margin: 10px;
+        max-height: calc(100vh - 40px);
+    }
+    
+    .mecas-modal-title {
+        font-size: 20px;
+    }
+
+    .mecas-suggestions {
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .mecas-trigger-button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+    
+    .mecas-card-image {
+        height: 150px;
+    }
+    
+    .mecas-pagination {
+        flex-wrap: wrap;
+    }
+}
+
+/* ========================================
+   TEACHER SEARCH WIDGET
+======================================== */
+
+.mecas-teacher-search-wrapper {
+    width: 100%;
+}
+
+.mecas-teacher-search-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+
+.mecas-teacher-search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mecas-teacher-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 50px;
+    padding: 5px 5px 5px 20px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.mecas-teacher-search-input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    padding: 10px 8px;
+    font-size: 15px;
+    color: #1F2937;
+    border: 0;
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mecas-teacher-search-input::placeholder {
+    color: #9CA3AF;
+}
+
+.mecas-teacher-search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.mecas-teacher-location-loading {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.mecas-teacher-search-button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: #2D3748;
+    border: 0;
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mecas-teacher-search-button:hover {
+    background-color: #1F2937;
+    transform: scale(1.05);
+}
+
+.mecas-teacher-search-button:focus {
+    outline: none;
+}
+
+.mecas-teacher-search-button svg {
+    width: 18px;
+    height: 18px;
+    stroke: #FFFFFF;
+}
+
+.mecas-teacher-search-count {
+    font-size: 16px;
+    color: #1F2937;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Teacher Search Grid */
+.mecas-teacher-search-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.mecas-teacher-search-grid.mecas-teacher-cols-1 { grid-template-columns: 1fr; }
+.mecas-teacher-search-grid.mecas-teacher-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.mecas-teacher-search-grid.mecas-teacher-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.mecas-teacher-search-grid.mecas-teacher-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.mecas-teacher-search-grid.mecas-teacher-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.mecas-teacher-search-grid.mecas-teacher-cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+/* Teacher Card */
+.mecas-teacher-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mecas-teacher-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.mecas-teacher-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.mecas-teacher-image-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mecas-teacher-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mecas-teacher-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+}
+
+.mecas-teacher-image-placeholder svg {
+    stroke: #D1D5DB;
+}
+
+.mecas-teacher-location-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E8927C;
+    color: #FFFFFF;
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+.mecas-teacher-location-text {
+    flex: 1;
+}
+
+.mecas-teacher-heart-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mecas-teacher-heart-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: #FFFFFF;
+    fill: none;
+}
+
+.mecas-teacher-content {
+    padding: 16px;
+    background-color: #FFFFFF;
+}
+
+.mecas-teacher-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 8px 0;
+}
+
+.mecas-teacher-tagline {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Teacher Pagination */
+.mecas-teacher-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #E5E7EB;
+    width: 100%;
+}
+
+.mecas-teacher-pagination a,
+.mecas-teacher-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #1F2937;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.mecas-teacher-pagination a:hover {
+    background-color: #F9FAFB;
+    border-color: #9CA3AF;
+}
+
+.mecas-teacher-pagination .current {
+    background-color: #2D3748;
+    border-color: #2D3748;
+    color: #FFFFFF;
+}
+
+.mecas-teacher-pagination .dots {
+    border: none;
+    background: transparent;
+}
+
+/* Teacher No Results */
+.mecas-teacher-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6B7280;
+}
+
+.mecas-teacher-no-results-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    color: #D1D5DB;
+}
+
+.mecas-teacher-no-results-text {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Teacher Search Responsive */
+@media (max-width: 1024px) {
+    .mecas-teacher-search-grid.mecas-teacher-cols-6 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .mecas-teacher-search-grid.mecas-teacher-cols-5 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mecas-teacher-search-grid.mecas-teacher-cols-6,
+    .mecas-teacher-search-grid.mecas-teacher-cols-5,
+    .mecas-teacher-search-grid.mecas-teacher-cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .mecas-teacher-search-bar {
+        max-width: 100%;
+    }
+    
+    .mecas-teacher-search-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mecas-teacher-search-grid.mecas-teacher-cols-6,
+    .mecas-teacher-search-grid.mecas-teacher-cols-5,
+    .mecas-teacher-search-grid.mecas-teacher-cols-4,
+    .mecas-teacher-search-grid.mecas-teacher-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mecas-teacher-image-wrapper {
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mecas-teacher-search-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ========================================
+   LOCATION SEARCH WIDGET (NEW)
+======================================== */
+
+.mecas-location-search-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mecas-location-search-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mecas-location-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 50px;
+    padding: 5px 5px 5px 20px;
+    position: relative;
+}
+
+.mecas-location-search-input {
+    flex: 1;
+    min-width: 0;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    padding: 12px 8px !important;
+    font-size: 16px;
+    color: #1F2937;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mecas-location-search-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.mecas-location-search-input::placeholder {
+    color: #9CA3AF;
+}
+
+.mecas-location-search-loading {
+    position: absolute;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    color: #9CA3AF;
+}
+
+.mecas-location-search-button {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border: none !important;
+    border-radius: 50%;
+    background-color: #2D3748;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.mecas-location-search-button:hover {
+    background-color: #1A202C;
+    transform: scale(1.05);
+}
+
+.mecas-location-search-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #FFFFFF;
+}
+
+.mecas-location-search-count {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    width: 100%;
+}
+
+.mecas-location-search-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mecas-location-search-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6B7280;
+    width: 100%;
+}
+
+.mecas-location-search-no-results svg {
+    margin-bottom: 16px;
+    color: #D1D5DB;
+}
+
+.mecas-location-search-no-results p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.mecas-location-search-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mecas-location-search-bar {
+        padding: 5px 5px 5px 15px;
+    }
+    
+    .mecas-location-search-input {
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   TEACHER SEARCH WIDGET
+======================================== */
+
+.mecas-teacher-search-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mecas-teacher-search-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mecas-teacher-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 4px 4px 4px 16px;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.mecas-teacher-search-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none !important;
+    border-width: 0 !important;
+    outline: none !important;
+    background: transparent !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
+    font-size: 15px;
+    color: #1F2937;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mecas-teacher-search-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.mecas-teacher-search-input::placeholder {
+    color: #9CA3AF;
+}
+
+.mecas-teacher-search-button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: #2D3748;
+    border: none !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mecas-teacher-search-button:hover {
+    background-color: #1A202C;
+}
+
+.mecas-teacher-search-button:focus {
+    outline: none;
+}
+
+.mecas-teacher-search-button svg {
+    stroke: #FFFFFF;
+    width: 18px;
+    height: 18px;
+}
+
+.mecas-teacher-search-loading {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.mecas-teacher-search-count {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    width: 100%;
+}
+
+.mecas-teacher-search-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mecas-teacher-search-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6B7280;
+    width: 100%;
+}
+
+.mecas-teacher-search-no-results svg {
+    margin-bottom: 16px;
+    color: #D1D5DB;
+}
+
+.mecas-teacher-search-no-results p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.mecas-teacher-search-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+/* ========================================
+   EVENTS LOCATION SEARCH WIDGET
+======================================== */
+
+.mecas-events-loc-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mecas-events-loc-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mecas-events-loc-bar {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 4px 4px 4px 16px;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.mecas-events-loc-input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none !important;
+    border-width: 0 !important;
+    outline: none !important;
+    background: transparent !important;
+    padding: 0 8px !important;
+    margin: 0 !important;
+    font-size: 15px;
+    color: #1F2937;
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mecas-events-loc-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.mecas-events-loc-input::placeholder {
+    color: #9CA3AF;
+}
+
+.mecas-events-loc-loading {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.mecas-events-loc-button {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-color: #2D3748;
+    border: none !important;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mecas-events-loc-button:hover {
+    background-color: #1A202C;
+}
+
+.mecas-events-loc-button:focus {
+    outline: none;
+}
+
+.mecas-events-loc-button svg {
+    stroke: #FFFFFF;
+    width: 18px;
+    height: 18px;
+}
+
+.mecas-events-loc-count {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2937;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    padding: 0;
+    width: 100%;
+}
+
+.mecas-events-loc-grid {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mecas-events-loc-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mecas-events-loc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mecas-events-loc-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.mecas-events-loc-card-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: #F3F4F6;
+}
+
+.mecas-events-loc-card-placeholder {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mecas-events-loc-card-placeholder svg {
+    width: 48px;
+    height: 48px;
+    stroke: #D1D5DB;
+}
+
+.mecas-events-loc-card-content {
+    padding: 16px;
+}
+
+.mecas-events-loc-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mecas-events-loc-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: #6B7280;
+}
+
+.mecas-events-loc-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mecas-events-loc-card-meta svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.mecas-events-loc-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6B7280;
+    width: 100%;
+}
+
+.mecas-events-loc-no-results svg {
+    margin-bottom: 16px;
+    color: #D1D5DB;
+}
+
+.mecas-events-loc-no-results p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.mecas-events-loc-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.mecas-events-loc-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #E5E7EB;
+    width: 100%;
+}
+
+.mecas-events-loc-pagination a,
+.mecas-events-loc-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #1F2937;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecas-events-loc-pagination a:hover {
+    background-color: #F9FAFB;
+    border-color: #9CA3AF;
+}
+
+.mecas-events-loc-pagination .current {
+    background-color: #2D3748;
+    border-color: #2D3748;
+    color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mecas-events-loc-bar {
+        padding: 5px 5px 5px 15px;
+    }
+    
+    .mecas-events-loc-input {
+        font-size: 14px;
+    }
+    
+    .mecas-events-loc-count {
+        font-size: 18px;
+    }
+}
+/**
+ * MEC User Addon Styles
+ */
+
+/* ============================================
+   Common Styles
+   ============================================ */
+
+.mecua-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecua-btn-primary {
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+.mecua-btn-primary:hover {
+    background-color: #374151;
+    color: #FFFFFF;
+}
+
+.mecua-btn-outline {
+    background-color: transparent;
+    border: 1px solid #D1D5DB;
+    color: #374151;
+}
+
+.mecua-btn-outline:hover {
+    background-color: #F3F4F6;
+}
+
+.mecua-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #E5E7EB;
+    border-top-color: #1F2937;
+    border-radius: 50%;
+    animation: mecua-spin 0.8s linear infinite;
+}
+
+@keyframes mecua-spin {
+    to { transform: rotate(360deg); }
+}
+
+.mecua-form-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.mecua-login-required,
+.mecua-empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6B7280;
+}
+
+.mecua-login-required p,
+.mecua-empty-state p {
+    margin-bottom: 20px;
+}
+
+.mecua-editor-notice {
+    padding: 20px;
+    background: #F3F4F6;
+    border: 1px dashed #D1D5DB;
+    border-radius: 8px;
+    text-align: center;
+    color: #6B7280;
+}
+
+/* ============================================
+   Registration Form
+   ============================================ */
+
+.mecua-registration-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mecua-step {
+    display: none;
+}
+
+.mecua-step.mecua-active {
+    display: block;
+}
+
+/* Social Buttons */
+.mecua-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.mecua-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecua-social-btn:hover {
+    background: #F9FAFB;
+    border-color: #D1D5DB;
+}
+
+.mecua-social-btn svg {
+    flex-shrink: 0;
+}
+
+.mecua-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.mecua-divider::before,
+.mecua-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.mecua-divider span {
+    padding: 0 15px;
+}
+
+.mecua-login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.mecua-login-link a {
+    color: #1F2937;
+    text-decoration: underline;
+}
+
+/* Form Fields */
+.mecua-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mecua-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mecua-form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.mecua-form-group input,
+.mecua-form-group select {
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.mecua-form-group input:focus,
+.mecua-form-group select:focus {
+    border-color: #1F2937;
+}
+
+.mecua-form-group input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Phone Input */
+.mecua-phone-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.mecua-phone-wrapper select {
+    width: 80px;
+    flex-shrink: 0;
+    padding: 12px 8px;
+}
+
+.mecua-phone-wrapper input {
+    flex: 1;
+}
+
+/* Password Input */
+.mecua-password-wrapper {
+    position: relative;
+}
+
+.mecua-password-wrapper input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.mecua-toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9CA3AF;
+    padding: 4px;
+}
+
+.mecua-toggle-password:hover {
+    color: #374151;
+}
+
+/* Form Buttons */
+.mecua-form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.mecua-form-buttons .mecua-btn {
+    flex: 1;
+}
+
+.mecua-btn-back {
+    background: transparent;
+    border: 1px solid #E5E7EB;
+    color: #374151;
+}
+
+.mecua-btn-back:hover {
+    background: #F3F4F6;
+}
+
+/* Verification Step */
+.mecua-step-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mecua-verify-message {
+    text-align: center;
+    color: #6B7280;
+    margin-bottom: 5px;
+}
+
+.mecua-verify-phone {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.mecua-verification-code {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mecua-code-input {
+    width: 50px;
+    height: 55px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    outline: none;
+}
+
+.mecua-code-input:focus {
+    border-color: #1F2937;
+}
+
+.mecua-wrong-number,
+.mecua-resend-timer,
+.mecua-resend-link {
+    text-align: center;
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 10px;
+}
+
+.mecua-wrong-number a,
+.mecua-resend-link a {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
+.mecua-resend-link {
+    display: none;
+}
+
+.mecua-skip-verification {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mecua-skip-btn {
+    color: #6B7280;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.mecua-skip-btn:hover {
+    color: #374151;
+}
+
+/* Thank You Step */
+.mecua-thank-you {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mecua-success-icon {
+    margin-bottom: 20px;
+}
+
+.mecua-thank-you-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.mecua-thank-you-message {
+    color: #6B7280;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Profile Card
+   ============================================ */
+
+.mecua-profile-card {
+    padding: 20px;
+}
+
+.mecua-profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.mecua-profile-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+}
+
+.mecua-profile-edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.mecua-profile-edit-icon:hover {
+    background: #F3F4F6;
+}
+
+.mecua-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mecua-profile-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mecua-profile-email {
+    color: #6B7280;
+    margin: 0;
+}
+
+.mecua-profile-location,
+.mecua-profile-joined {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.mecua-profile-edit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #1F2937;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.mecua-profile-edit-btn:hover {
+    background: #374151;
+    color: #FFFFFF;
+}
+
+/* ============================================
+   Events Grid
+   ============================================ */
+
+.mecua-events-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.mecua-event-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.mecua-event-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mecua-event-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mecua-event-card-image {
+    position: relative;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #F3F4F6;
+}
+
+.mecua-event-price {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    background: #D1FAE5;
+    color: #065F46;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.mecua-event-date-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #1F2937;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.mecua-event-category {
+    padding: 4px 10px;
+    background: #D1FAE5;
+    color: #065F46;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.mecua-event-card-content {
+    padding: 15px;
+}
+
+.mecua-event-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #1F2937;
+}
+
+.mecua-event-location {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 0 0 5px 0;
+}
+
+.mecua-event-organizer {
+    font-size: 13px;
+    color: #9CA3AF;
+    margin: 0;
+}
+
+/* ============================================
+   Following Grid
+   ============================================ */
+
+.mecua-following-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.mecua-following-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mecua-following-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mecua-following-card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #F3F4F6;
+}
+
+.mecua-following-location-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #E8B4A0;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.mecua-following-heart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: inherit;
+}
+
+.mecua-following-heart svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.mecua-following-card-content {
+    padding: 15px;
+}
+
+.mecua-following-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #1F2937;
+}
+
+.mecua-following-tagline {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 0;
+    font-style: italic;
+}
+
+/* ============================================
+   Save Event Button
+   ============================================ */
+
+.mecua-save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #1F2937;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecua-save-btn:hover {
+    background: #374151;
+}
+
+.mecua-save-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.mecua-save-btn.mecua-saved {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.mecua-save-btn.mecua-saving {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* ============================================
+   Edit Profile Form
+   ============================================ */
+
+.mecua-edit-profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mecua-edit-profile-form {
+    position: relative;
+}
+
+.mecua-edit-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.mecua-edit-image-section {
+    flex-shrink: 0;
+}
+
+.mecua-edit-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.mecua-edit-image-preview {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.mecua-edit-image-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+}
+
+.mecua-edit-image-btn:hover {
+    background: #F3F4F6;
+}
+
+.mecua-edit-fields-section {
+    flex: 1;
+}
+
+.mecua-edit-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.mecua-edit-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.mecua-edit-field {
+    margin-bottom: 20px;
+}
+
+.mecua-edit-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.mecua-edit-field input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    outline: none;
+}
+
+.mecua-edit-field input:focus {
+    border-color: #1F2937;
+}
+
+.mecua-edit-field input:disabled {
+    background: #F9FAFB;
+    color: #6B7280;
+}
+
+.mecua-edit-password-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mecua-change-password-btn {
+    padding: 10px 20px;
+}
+
+.mecua-password-fields {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #F9FAFB;
+}
+
+.mecua-edit-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.mecua-btn-save {
+    padding: 14px 40px;
+    background: #1F2937;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mecua-btn-save:hover {
+    background: #374151;
+}
+
+.mecua-btn-cancel {
+    padding: 14px 40px;
+    background: #E8B4A0;
+    color: #1F2937;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mecua-btn-cancel:hover {
+    background: #DCA58F;
+}
+
+.mecua-form-message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.mecua-form-message.success {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.mecua-form-message.error {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+    .mecua-edit-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mecua-edit-fields-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .mecua-edit-buttons {
+        flex-direction: column;
+    }
+    
+    .mecua-edit-buttons .mecua-btn-save,
+    .mecua-edit-buttons .mecua-btn-cancel {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .mecua-code-input {
+        width: 45px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+/**
+ * MEC User Addon Styles
+ */
+
+/* ============================================
+   Common Styles
+   ============================================ */
+
+.mecua-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecua-btn-primary {
+    background-color: #1F2937;
+    color: #FFFFFF;
+}
+
+.mecua-btn-primary:hover {
+    background-color: #374151;
+    color: #FFFFFF;
+}
+
+.mecua-btn-outline {
+    background-color: transparent;
+    border: 1px solid #D1D5DB;
+    color: #374151;
+}
+
+.mecua-btn-outline:hover {
+    background-color: #F3F4F6;
+}
+
+.mecua-spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #E5E7EB;
+    border-top-color: #1F2937;
+    border-radius: 50%;
+    animation: mecua-spin 0.8s linear infinite;
+}
+
+@keyframes mecua-spin {
+    to { transform: rotate(360deg); }
+}
+
+.mecua-form-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.mecua-login-required,
+.mecua-empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6B7280;
+}
+
+.mecua-login-required p,
+.mecua-empty-state p {
+    margin-bottom: 20px;
+}
+
+.mecua-editor-notice {
+    padding: 20px;
+    background: #F3F4F6;
+    border: 1px dashed #D1D5DB;
+    border-radius: 8px;
+    text-align: center;
+    color: #6B7280;
+}
+
+/* ============================================
+   Registration Form
+   ============================================ */
+
+.mecua-registration-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mecua-step {
+    display: none;
+}
+
+.mecua-step.mecua-active {
+    display: block;
+}
+
+/* Social Buttons */
+.mecua-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.mecua-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecua-social-btn:hover {
+    background: #F9FAFB;
+    border-color: #D1D5DB;
+}
+
+.mecua-social-btn svg {
+    flex-shrink: 0;
+}
+
+.mecua-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.mecua-divider::before,
+.mecua-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.mecua-divider span {
+    padding: 0 15px;
+}
+
+.mecua-login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.mecua-login-link a {
+    color: #1F2937;
+    text-decoration: underline;
+}
+
+/* Form Fields */
+.mecua-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mecua-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mecua-form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.mecua-form-group input,
+.mecua-form-group select {
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.mecua-form-group input:focus,
+.mecua-form-group select:focus {
+    border-color: #1F2937;
+}
+
+.mecua-form-group input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Phone Input */
+.mecua-phone-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.mecua-phone-wrapper select {
+    width: 80px;
+    flex-shrink: 0;
+    padding: 12px 8px;
+}
+
+.mecua-phone-wrapper input {
+    flex: 1;
+}
+
+/* Password Input */
+.mecua-password-wrapper {
+    position: relative;
+}
+
+.mecua-password-wrapper input {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.mecua-toggle-password {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9CA3AF;
+    padding: 4px;
+}
+
+.mecua-toggle-password:hover {
+    color: #374151;
+}
+
+/* Form Buttons */
+.mecua-form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.mecua-form-buttons .mecua-btn {
+    flex: 1;
+}
+
+.mecua-btn-back {
+    background: transparent;
+    border: 1px solid #E5E7EB;
+    color: #374151;
+}
+
+.mecua-btn-back:hover {
+    background: #F3F4F6;
+}
+
+/* Verification Step */
+.mecua-step-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mecua-verify-message {
+    text-align: center;
+    color: #6B7280;
+    margin-bottom: 5px;
+}
+
+.mecua-verify-phone {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.mecua-verification-code {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mecua-code-input {
+    width: 50px;
+    height: 55px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    outline: none;
+}
+
+.mecua-code-input:focus {
+    border-color: #1F2937;
+}
+
+.mecua-wrong-number,
+.mecua-resend-timer,
+.mecua-resend-link {
+    text-align: center;
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 10px;
+}
+
+.mecua-wrong-number a,
+.mecua-resend-link a {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
+.mecua-resend-link {
+    display: none;
+}
+
+.mecua-skip-verification {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mecua-skip-btn {
+    color: #6B7280;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.mecua-skip-btn:hover {
+    color: #374151;
+}
+
+/* Thank You Step */
+.mecua-thank-you {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mecua-success-icon {
+    margin-bottom: 20px;
+}
+
+.mecua-thank-you-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.mecua-thank-you-message {
+    color: #6B7280;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Profile Card
+   ============================================ */
+
+.mecua-profile-card {
+    padding: 20px;
+}
+
+.mecua-profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.mecua-profile-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+}
+
+.mecua-profile-edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.mecua-profile-edit-icon:hover {
+    background: #F3F4F6;
+}
+
+.mecua-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mecua-profile-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.mecua-profile-email {
+    color: #6B7280;
+    margin: 0;
+}
+
+.mecua-profile-location,
+.mecua-profile-joined {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.mecua-profile-edit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #1F2937;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.mecua-profile-edit-btn:hover {
+    background: #374151;
+    color: #FFFFFF;
+}
+
+/* ============================================
+   Events Grid
+   ============================================ */
+
+.mecua-events-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.mecua-event-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.mecua-event-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mecua-event-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mecua-event-card-image {
+    position: relative;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #F3F4F6;
+}
+
+.mecua-event-price {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    background: #D1FAE5;
+    color: #065F46;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.mecua-event-date-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #1F2937;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.mecua-event-category {
+    padding: 4px 10px;
+    background: #D1FAE5;
+    color: #065F46;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.mecua-event-card-content {
+    padding: 15px;
+}
+
+.mecua-event-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #1F2937;
+}
+
+.mecua-event-location {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 0 0 5px 0;
+}
+
+.mecua-event-organizer {
+    font-size: 13px;
+    color: #9CA3AF;
+    margin: 0;
+}
+
+/* ============================================
+   Following Grid
+   ============================================ */
+
+.mecua-following-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.mecua-following-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mecua-following-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mecua-following-card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #F3F4F6;
+}
+
+.mecua-following-location-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #E8B4A0;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.mecua-following-heart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: inherit;
+}
+
+.mecua-following-heart svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.mecua-following-card-content {
+    padding: 15px;
+}
+
+.mecua-following-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #1F2937;
+}
+
+.mecua-following-tagline {
+    font-size: 14px;
+    color: #6B7280;
+    margin: 0;
+    font-style: italic;
+}
+
+/* ============================================
+   Save Event Button
+   ============================================ */
+
+.mecua-save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #1F2937;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecua-save-btn:hover {
+    background: #374151;
+}
+
+.mecua-save-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.mecua-save-btn.mecua-saved {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.mecua-save-btn.mecua-saving {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* ============================================
+   Edit Profile Form
+   ============================================ */
+
+.mecua-edit-profile-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mecua-edit-profile-form {
+    position: relative;
+}
+
+.mecua-edit-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.mecua-edit-image-section {
+    flex-shrink: 0;
+}
+
+.mecua-edit-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.mecua-edit-image-preview {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.mecua-edit-image-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+}
+
+.mecua-edit-image-btn:hover {
+    background: #F3F4F6;
+}
+
+.mecua-edit-fields-section {
+    flex: 1;
+}
+
+.mecua-edit-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.mecua-edit-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.mecua-edit-field {
+    margin-bottom: 20px;
+}
+
+.mecua-edit-field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.mecua-edit-field input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    outline: none;
+}
+
+.mecua-edit-field input:focus {
+    border-color: #1F2937;
+}
+
+.mecua-edit-field input:disabled {
+    background: #F9FAFB;
+    color: #6B7280;
+}
+
+.mecua-edit-password-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mecua-change-password-btn {
+    padding: 10px 20px;
+}
+
+.mecua-password-fields {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #F9FAFB;
+}
+
+.mecua-edit-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.mecua-btn-save {
+    padding: 14px 40px;
+    background: #1F2937;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mecua-btn-save:hover {
+    background: #374151;
+}
+
+.mecua-btn-cancel {
+    padding: 14px 40px;
+    background: #E8B4A0;
+    color: #1F2937;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mecua-btn-cancel:hover {
+    background: #DCA58F;
+}
+
+.mecua-form-message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.mecua-form-message.success {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.mecua-form-message.error {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+    .mecua-edit-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mecua-edit-fields-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .mecua-edit-buttons {
+        flex-direction: column;
+    }
+    
+    .mecua-edit-buttons .mecua-btn-save,
+    .mecua-edit-buttons .mecua-btn-cancel {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .mecua-code-input {
+        width: 45px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* =============================================
+   Registration Form v5.5.4 Updates
+   ============================================= */
+
+/* Hide skip verification (now required) */
+.mecua-skip-verification,
+.mecua-skip-btn {
+    display: none !important;
+}
+
+/* Logo */
+.mecua-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mecua-logo img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Host Signup Link */
+.mecua-host-signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.mecua-host-signup-link a {
+    color: #1F2937;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* Field Notes */
+.mecua-field-note {
+    font-size: 12px;
+    color: #9CA3AF;
+    margin: 4px 0 0;
+    font-style: italic;
+}
+
+/* Required Note */
+.mecua-required-note {
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 15px;
+}
+
+/* Location Wrapper with Detect Button */
+.mecua-location-group {
+    position: relative;
+}
+
+.mecua-location-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mecua-location-wrapper input {
+    flex: 1;
+    padding-right: 45px !important;
+}
+
+.mecua-detect-location {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.mecua-detect-location:hover {
+    color: #1F2937;
+}
+
+.mecua-detect-location.mecua-detecting {
+    animation: mecua-pulse 1s infinite;
+}
+
+@keyframes mecua-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Secondary Button */
+.mecua-btn-secondary {
+    background: #FFFFFF !important;
+    color: #374151 !important;
+    border: 1px solid #D1D5DB !important;
+}
+
+.mecua-btn-secondary:hover {
+    background: #F9FAFB !important;
+}
+
+/* Full Width Button */
+.mecua-btn-full {
+    width: 100%;
+}
+
+/* Form Buttons - Side by Side */
+.mecua-form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.mecua-form-buttons .mecua-btn {
+    flex: 1;
+}
+
+/* Verify Buttons */
+.mecua-verify-buttons {
+    justify-content: center;
+}
+
+.mecua-verify-buttons .mecua-btn-verify {
+    max-width: 200px;
+}
+
+/* Thank You Subtitle */
+.mecua-thank-you-subtitle {
+    font-size: 18px;
+    color: #6B7280;
+    margin: 10px 0 5px;
+}
+
+/* Error Display */
+.mecua-form-error {
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #991B1B;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+/* =============================================
+   Registration Social Buttons - Override Styles
+   ============================================= */
+
+.mecua-registration-wrapper .mecua-social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.mecua-registration-wrapper .mecua-social-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 30px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    color: #374151 !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+}
+
+.mecua-registration-wrapper .mecua-social-btn:hover {
+    background: #F9FAFB !important;
+    background-color: #F9FAFB !important;
+    border-color: #D1D5DB !important;
+}
+
+.mecua-registration-wrapper .mecua-social-btn svg {
+    flex-shrink: 0;
+}
+
+/* Email Button - Full width like other buttons */
+.mecua-registration-wrapper .mecua-btn-email,
+.mecua-registration-wrapper .mecua-social-email {
+    width: 100% !important;
+    margin-top: 0 !important;
+    display: flex !important;
+}
+
+/* Step 1 Layout */
+.mecua-registration-wrapper .mecua-step-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mecua-registration-wrapper .mecua-step-1 .mecua-social-buttons + .mecua-social-btn {
+    margin-top: 0;
+}
+
+
+/* ============================================
+   USER DASHBOARD WIDGET STYLES
+   ============================================ */
+.mecas-user-dashboard {
+    background: #ffffff;
+    padding: 30px;
+}
+
+.mecas-dashboard-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 30px 0;
+}
+
+/* Stats */
+.mecas-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mecas-dashboard-stat {
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+}
+
+.mecas-stat-number {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #3B82F6;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.mecas-stat-label {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+/* Form Fields */
+.mecas-dashboard-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.mecas-fields-row {
+    display: grid;
+    gap: 20px;
+}
+
+.mecas-fields-row-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+    .mecas-fields-row-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mecas-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mecas-field-full {
+    grid-column: 1 / -1;
+}
+
+.mecas-field-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.mecas-field-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mecas-field-wrapper.has-icon .mecas-field-input {
+    padding-left: 48px;
+}
+
+.mecas-field-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.mecas-field-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #1F2937;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.mecas-field-input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    background: #ffffff;
+}
+
+.mecas-field-input[readonly] {
+    background: #F3F4F6;
+    cursor: not-allowed;
+}
+
+.mecas-field-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Avatar Upload */
+.mecas-avatar-upload {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #F9FAFB;
+    border: 2px dashed #E5E7EB;
+    border-radius: 12px;
+}
+
+.mecas-avatar-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #E5E7EB;
+}
+
+.mecas-avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mecas-avatar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mecas-avatar-change-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecas-avatar-change-btn:hover {
+    background: #F3F4F6;
+    border-color: #D1D5DB;
+}
+
+.mecas-avatar-filename {
+    font-size: 13px;
+    color: #9CA3AF;
+}
+
+/* Messages */
+.mecas-dashboard-message {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.mecas-dashboard-success {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.mecas-dashboard-error {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+/* Buttons */
+.mecas-dashboard-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.mecas-buttons-left {
+    display: flex;
+    gap: 12px;
+}
+
+.mecas-dashboard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.mecas-dashboard-save {
+    background: #3B82F6;
+    color: #ffffff;
+}
+
+.mecas-dashboard-save:hover {
+    background: #2563EB;
+}
+
+.mecas-dashboard-save:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.mecas-dashboard-cancel {
+    background: #F3F4F6;
+    color: #6B7280;
+}
+
+.mecas-dashboard-cancel:hover {
+    background: #E5E7EB;
+}
+
+.mecas-dashboard-logout {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.mecas-dashboard-logout:hover {
+    background: #FECACA;
+}
+
+/* AJAX Container */
+.mecas-dashboard-ajax-container {
+    margin-top: 30px;
+    display: none;
+}
+
+.mecas-dashboard-loading {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.mecas-dashboard-loading p {
+    margin-top: 16px;
+    color: #6B7280;
+}
+
+/* ========================================
+   GLOBAL SAVE EVENT & FOLLOW CLASSES
+   ========================================
+   Usage:
+   - Save Event: Add class "mecas-save-event" with data-event-id="123"
+   - Follow Organizer: Add class "mecas-follow-organizer" with data-organizer-id="123"
+   
+   State Classes (auto-toggled):
+   - mecas-saved: Event is saved
+   - mecas-saving: Currently saving
+   - mecas-following: Following organizer  
+   - mecas-processing: Currently processing
+======================================== */
+
+/* Save Event Button */
+.mecas-save-event {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecas-save-event.mecas-saving {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Default heart/bookmark icon styling - customize as needed */
+.mecas-save-event svg,
+.mecas-save-event i {
+    transition: all 0.2s ease;
+}
+
+/* When saved - fill the icon */
+.mecas-save-event.mecas-saved svg {
+    fill: currentColor;
+}
+
+.mecas-save-event.mecas-saved svg path {
+    fill: currentColor;
+}
+
+/* Hover effect */
+.mecas-save-event:hover {
+    transform: scale(1.1);
+}
+
+/* Follow Organizer Button */
+.mecas-follow-organizer {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mecas-follow-organizer.mecas-processing {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* When following - fill the icon */
+.mecas-follow-organizer.mecas-following svg {
+    fill: currentColor;
+}
+
+.mecas-follow-organizer.mecas-following svg path {
+    fill: currentColor;
+}
+
+/* Hover effect */
+.mecas-follow-organizer:hover {
+    transform: scale(1.1);
+}
+
+/* Animation for saving/processing state */
+@keyframes mecas-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.mecas-save-event.mecas-saving,
+.mecas-follow-organizer.mecas-processing {
+    animation: mecas-pulse 1s ease infinite;
+}
+
+/* ========================================
+   TOAST NOTIFICATION POPUP
+======================================== */
+
+.mecas-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.mecas-toast {
+    background: #1F2937;
+    color: #FFFFFF;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 280px;
+    max-width: 400px;
+    pointer-events: auto;
+    animation: mecas-toast-slide-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-origin: top right;
+}
+
+.mecas-toast.mecas-toast-hide {
+    animation: mecas-toast-slide-out 0.3s ease forwards;
+}
+
+.mecas-toast-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.mecas-toast-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #EF4444;
+}
+
+.mecas-toast-content {
+    flex: 1;
+}
+
+.mecas-toast-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 0 2px 0;
+}
+
+.mecas-toast-message {
+    font-size: 13px;
+    color: #9CA3AF;
+    margin: 0;
+}
+
+.mecas-toast-close {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #6B7280;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.mecas-toast-close:hover {
+    color: #FFFFFF;
+}
+
+.mecas-toast-close svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Toast success variant */
+.mecas-toast.mecas-toast-success .mecas-toast-icon svg {
+    fill: #10B981;
+}
+
+/* Toast follow variant */
+.mecas-toast.mecas-toast-follow .mecas-toast-icon svg {
+    fill: #EF4444;
+}
+
+/* Toast unfollow variant */
+.mecas-toast.mecas-toast-unfollow .mecas-toast-icon svg {
+    fill: #6B7280;
+    stroke: #6B7280;
+}
+
+/* Toast save variant */
+.mecas-toast.mecas-toast-save .mecas-toast-icon svg {
+    fill: #F59E0B;
+}
+
+@keyframes mecas-toast-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes mecas-toast-slide-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.8);
+    }
+}
+
+/* ========================================
+   FOLLOW HEART ANIMATION
+======================================== */
+
+.mecas-follow-organizer {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.mecas-follow-organizer:hover {
+    transform: scale(1.1);
+}
+
+.mecas-follow-organizer svg {
+    transition: all 0.3s ease;
+}
+
+/* Following state - filled heart */
+.mecas-follow-organizer.mecas-following svg {
+    fill: #EF4444 !important;
+    stroke: #EF4444 !important;
+}
+
+/* Processing state */
+.mecas-follow-organizer.mecas-processing {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Pop animation when following */
+.mecas-follow-organizer.mecas-heart-pop {
+    animation: mecas-heart-pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes mecas-heart-pop {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    75% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Pulse effect on heart when following */
+.mecas-follow-organizer.mecas-following::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(239, 68, 68, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: mecas-heart-pulse 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes mecas-heart-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Make heart icon container relative for pulse effect */
+.mecas-heart-icon.mecas-follow-organizer {
+    position: relative;
+}
+
+/* Mobile responsive for toast */
+@media (max-width: 480px) {
+    .mecas-toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .mecas-toast {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* ========================================
+   SAVE EVENT ANIMATION
+======================================== */
+
+.mecas-save-event {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.mecas-save-event:hover {
+    transform: scale(1.1);
+}
+
+.mecas-save-event svg {
+    transition: all 0.3s ease;
+}
+
+/* Saved state - filled bookmark */
+.mecas-save-event.mecas-saved svg {
+    fill: #F59E0B !important;
+    stroke: #F59E0B !important;
+}
+
+/* Processing state */
+.mecas-save-event.mecas-saving {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Pop animation when saving */
+.mecas-save-event.mecas-heart-pop {
+    animation: mecas-heart-pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ========================================
+   SAVE BUTTON BOOKMARK FILL ANIMATION
+======================================== */
+
+/* Bookmark icon default state - outline only */
+.mecas-save-btn .mecas-btn-icon svg,
+.mecas-save-btn .mecas-btn-icon i,
+.mecas-save-event svg {
+    transition: all 0.3s ease;
+    fill: transparent;
+}
+
+/* Bookmark icon saved state - filled */
+.mecas-save-btn.mecas-saved .mecas-btn-icon svg,
+.mecas-save-btn.mecas-saved .mecas-btn-icon i,
+.mecas-save-event.mecas-saved svg {
+    fill: currentColor !important;
+}
+
+/* Pop animation for save button */
+.mecas-save-btn.mecas-heart-pop,
+.mecas-save-event.mecas-heart-pop {
+    animation: mecas-heart-pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Processing/saving state */
+.mecas-save-btn.mecas-saving {
+    pointer-events: none;
+    opacity: 0.7;
+}
