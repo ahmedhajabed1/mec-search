@@ -1,0 +1,56 @@
+/**
+ * MEC Organizer Manager - Admin Styles
+ */
+
+/* Organizer User Link Notice */
+.mecom-user-linked {
+    background: #D1FAE5;
+    color: #065F46;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.mecom-user-not-linked {
+    background: #FEF3C7;
+    color: #92400E;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Sync Button */
+.mecom-sync-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.mecom-sync-button:hover {
+    background: #135e96;
+}
+
+.mecom-sync-button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Profile Link in Edit Form */
+.mecom-profile-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.mecom-profile-link:hover {
+    color: #135e96;
+    text-decoration: underline;
+}

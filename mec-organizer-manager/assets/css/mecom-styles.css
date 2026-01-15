@@ -1,0 +1,532 @@
+/**
+ * MEC Organizer Manager - Frontend Styles
+ */
+
+:root {
+    --mecom-primary: #2D3748;
+    --mecom-primary-hover: #1A202C;
+    --mecom-accent: #E8927C;
+    --mecom-text-dark: #1F2937;
+    --mecom-text-muted: #6B7280;
+    --mecom-text-light: #FFFFFF;
+    --mecom-border-color: #E5E7EB;
+    --mecom-bg-light: #F9FAFB;
+    --mecom-bg-white: #FFFFFF;
+    --mecom-radius: 8px;
+    --mecom-radius-lg: 12px;
+    --mecom-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --mecom-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+    --mecom-transition: 0.2s ease;
+}
+
+/* ========================================
+   TEACHER PROFILE PAGE
+======================================== */
+
+.mecom-teacher-profile {
+    padding: 40px 20px;
+    background: var(--mecom-bg-light);
+    min-height: 100vh;
+}
+
+.mecom-profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Profile Header */
+.mecom-profile-header {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.mecom-profile-photo-wrap {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.mecom-profile-photo {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--mecom-radius-lg);
+}
+
+.mecom-profile-photo-placeholder {
+    width: 200px;
+    height: 250px;
+    background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+    border-radius: var(--mecom-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mecom-profile-photo-placeholder svg {
+    width: 80px;
+    height: 80px;
+    color: #9CA3AF;
+}
+
+.mecom-share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--mecom-primary);
+    color: var(--mecom-text-light);
+    border: none;
+    border-radius: var(--mecom-radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background var(--mecom-transition);
+}
+
+.mecom-share-button:hover {
+    background: var(--mecom-primary-hover);
+}
+
+.mecom-profile-info {
+    flex: 1;
+}
+
+.mecom-profile-name {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--mecom-text-dark);
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mecom-profile-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: var(--mecom-text-muted);
+    margin: 0 0 8px 0;
+}
+
+.mecom-profile-location svg {
+    flex-shrink: 0;
+}
+
+.mecom-profile-tagline {
+    font-size: 18px;
+    color: var(--mecom-text-muted);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Profile Sections */
+.mecom-profile-section {
+    background: var(--mecom-bg-white);
+    border-radius: var(--mecom-radius-lg);
+    padding: 30px;
+    margin-bottom: 24px;
+    box-shadow: var(--mecom-shadow);
+}
+
+.mecom-section-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mecom-section-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--mecom-accent);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.mecom-section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--mecom-border-color);
+}
+
+.mecom-profile-bio,
+.mecom-profile-fun-fact,
+.mecom-profile-offerings {
+    color: var(--mecom-text-dark);
+    line-height: 1.7;
+}
+
+.mecom-profile-bio p,
+.mecom-profile-fun-fact p,
+.mecom-profile-offerings p {
+    margin: 0 0 15px 0;
+}
+
+.mecom-profile-bio p:last-child,
+.mecom-profile-fun-fact p:last-child,
+.mecom-profile-offerings p:last-child {
+    margin-bottom: 0;
+}
+
+/* Social Links */
+.mecom-social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.mecom-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--mecom-primary);
+    border-radius: 50%;
+    color: var(--mecom-text-light);
+    transition: transform var(--mecom-transition), background var(--mecom-transition);
+}
+
+.mecom-social-link:hover {
+    transform: scale(1.1);
+    background: var(--mecom-primary-hover);
+    color: var(--mecom-text-light);
+}
+
+.mecom-social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Events Grid */
+.mecom-events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.mecom-event-card {
+    background: var(--mecom-bg-white);
+    border-radius: var(--mecom-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--mecom-shadow);
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--mecom-transition), box-shadow var(--mecom-transition);
+}
+
+.mecom-event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--mecom-shadow-lg);
+}
+
+.mecom-event-image-wrap {
+    position: relative;
+}
+
+.mecom-event-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.mecom-event-image-placeholder {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+}
+
+.mecom-event-price {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #0D9488;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mecom-event-date-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.mecom-event-content {
+    padding: 16px;
+}
+
+.mecom-event-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--mecom-text-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.mecom-no-events {
+    text-align: center;
+    padding: 40px;
+    color: var(--mecom-text-muted);
+}
+
+/* ========================================
+   LOGIN / REGISTER FORMS
+======================================== */
+
+.mecom-login-form-wrap,
+.mecom-register-form-wrap {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.mecom-login-form,
+.mecom-register-form {
+    background: var(--mecom-bg-white);
+    padding: 40px;
+    border-radius: var(--mecom-radius-lg);
+    box-shadow: var(--mecom-shadow-lg);
+}
+
+.mecom-form-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--mecom-text-dark);
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.mecom-form-subtitle {
+    text-align: center;
+    color: var(--mecom-text-muted);
+    margin: 0 0 30px 0;
+}
+
+.mecom-form-group {
+    margin-bottom: 20px;
+}
+
+.mecom-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--mecom-text-dark);
+    margin-bottom: 6px;
+}
+
+.mecom-form-group label .required {
+    color: #DC2626;
+}
+
+.mecom-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 1px solid var(--mecom-border-color);
+    border-radius: var(--mecom-radius);
+    transition: border-color var(--mecom-transition), box-shadow var(--mecom-transition);
+}
+
+.mecom-input:focus {
+    outline: none;
+    border-color: var(--mecom-primary);
+    box-shadow: 0 0 0 3px rgba(45, 55, 72, 0.1);
+}
+
+.mecom-field-hint {
+    font-size: 12px;
+    color: var(--mecom-text-muted);
+    margin: 6px 0 0 0;
+}
+
+.mecom-remember,
+.mecom-terms {
+    margin-bottom: 24px;
+}
+
+.mecom-remember label,
+.mecom-terms label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.mecom-remember input,
+.mecom-terms input {
+    margin-top: 2px;
+}
+
+.mecom-submit-button {
+    width: 100%;
+    padding: 14px 24px;
+    background: var(--mecom-primary);
+    color: var(--mecom-text-light);
+    border: none;
+    border-radius: var(--mecom-radius);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background var(--mecom-transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mecom-submit-button:hover {
+    background: var(--mecom-primary-hover);
+}
+
+.mecom-submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.mecom-spinner {
+    animation: mecom-spin 1s linear infinite;
+}
+
+@keyframes mecom-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.mecom-form-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--mecom-text-muted);
+}
+
+.mecom-form-links a {
+    color: var(--mecom-primary);
+    text-decoration: none;
+}
+
+.mecom-form-links a:hover {
+    text-decoration: underline;
+}
+
+.mecom-separator {
+    margin: 0 10px;
+}
+
+.mecom-form-message {
+    padding: 12px 16px;
+    border-radius: var(--mecom-radius);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.mecom-form-message.success {
+    background: #D1FAE5;
+    color: #065F46;
+    border: 1px solid #6EE7B7;
+}
+
+.mecom-form-message.error {
+    background: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FECACA;
+}
+
+/* Logged In State */
+.mecom-logged-in {
+    text-align: center;
+    padding: 40px;
+    background: var(--mecom-bg-white);
+    border-radius: var(--mecom-radius-lg);
+    box-shadow: var(--mecom-shadow);
+}
+
+.mecom-logged-in p {
+    margin: 0 0 15px 0;
+}
+
+.mecom-logged-in .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--mecom-primary);
+    color: var(--mecom-text-light);
+    text-decoration: none;
+    border-radius: var(--mecom-radius);
+    margin: 5px;
+}
+
+.mecom-logged-in .button:hover {
+    background: var(--mecom-primary-hover);
+    color: var(--mecom-text-light);
+}
+
+/* ========================================
+   404 / NOT FOUND
+======================================== */
+
+.mecom-not-found {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.mecom-not-found h1 {
+    font-size: 32px;
+    color: var(--mecom-text-muted);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .mecom-profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .mecom-profile-name {
+        justify-content: center;
+        font-size: 26px;
+    }
+    
+    .mecom-profile-location {
+        justify-content: center;
+    }
+    
+    .mecom-events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mecom-login-form,
+    .mecom-register-form {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mecom-events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mecom-profile-photo,
+    .mecom-profile-photo-placeholder {
+        width: 150px;
+        height: 180px;
+    }
+}
